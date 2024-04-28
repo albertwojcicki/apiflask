@@ -1,13 +1,14 @@
 {% extends "base.html" %}
 {% block content %}
-
-<h2>Logg inn</h2>
+<div class="sentrerTekst">
+<h2 class="text">Logg inn</h2></div>
 <div class="form-container">
 <form action="logginn" method="post">
-    <input type="text" id="navn" name="navn">
+    <input type="text" id="navn" name="navn" placeholder="Skriv inn navn" autofocus style="color:#eaf2fa;">
     <input type="submit">
 </form></div>
 {% if feil %}
-<p>{{feil}} </p>
+<div class="sentrerTekst">
+<h3 class="text">{{feil}} </h3></div>
 {% endif %}
 {% endblock %}

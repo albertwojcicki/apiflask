@@ -132,7 +132,12 @@ article {
     background-color: #0e2032;
     color: #eaf2fa;
 }
-
+.sentrerTekst {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+}
 /* Styling for the todo ID */
 .todo-id {
     font-size: 14px;
