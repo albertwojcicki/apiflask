@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="div-overskrift">
+<h2 class="text">Endre Todo</h2>
+</div>
+<div id="div-form">
+  <div class="form-container">
+<form action="{{ url_for('endreTodo', id=id, todoId=todoId) }}" id="form-endre" method="post">
+
+    <input type="text" value="{{todo}}" name="todo" autofocus style="color:#eaf2fa;">
+    <input type="submit" class="edit-button"value="Endre">
+  </form>
+  
+  <form action="{{ url_for('todo_page', id=id) }}">
+    <input type="submit" class="delete-button"value="Avbryt Endring">
+  </form></div></div>
+{% endblock %}

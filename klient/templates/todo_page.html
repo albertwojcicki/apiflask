@@ -1,11 +1,41 @@
 {% extends "base.html" %}
 {% block content %}
-<h3>Legg til todo</h3>
-<form action="{{ url_for('leggTilTodo', id=id) }}" method="post">
-    <input type="text" name="todoText">
-    <input type="submit">
-</form>
-<p>Logget inn som: {{data.navn}}</p>
+<div id="div-logget-inn">
+<h2 class="text">Hei {{data.navn}}!</h2><br>
+<h2 class="text">Legg til To-Do</h2>
+</div>
 
-{{id}}
+<div id="div-form">
+
+    <div class="form-container">
+        <form action="{{ url_for('leggTilTodo', id=id) }}" method="post">
+            <input type="text" name="todoText" placeholder="Enter your todo here" autofocus style="color:#eaf2fa;">
+            <input type="submit" value="Add Todo">
+        </form>
+    </div>
+
+</div>
+<div id="div-todos">
+    {% for i in data %}
+        <div class="todo-item">
+            <p class="todo-text">{{ i.todo }}</p>
+            <div class="div-forms-todo">
+
+           
+            <form action="{{ url_for('slettTodo', id=id, todoId=i.todoId) }}" method="post">
+                <button class="delete-button" type="submit">Slett</button>
+            </form>
+            <form action="{{ url_for('endreTodo', id=id, todoId=i.todoId) }}" method="get">
+                <button class="edit-button" type="submit">Endre</button>
+            </form>
+             </div>
+            
+        </div>
+        {% if loop.index % 4 == 0 %}
+            <div class="clear"></div> <!-- Clear the float after every 4 items -->
+        {% endif %}
+    {% endfor %}
+    <div class="clear"></div> <!-- Ensure the last row is cleared -->
+</div>
+
 {% endblock %}

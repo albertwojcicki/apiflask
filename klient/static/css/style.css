@@ -1,0 +1,183 @@
+* {
+    padding: 0;
+    margin: 0;
+    background-color: #08182b;
+}
+
+header {
+    height: 50px;
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+    background-color: #0df2d7;
+}
+
+#title {
+    background-color: #0df2d7;
+    color: #08182b;
+}
+.text {
+    background-color: #08182b;
+    color: #eaf2fa;
+}
+article {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+#div-logget-inn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+#div-form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 30px;
+}
+
+  /* Styling for the form container */
+  .form-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    margin-top: 20px;
+    background-color: #08182b;
+    color: #eaf2fa;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for the form fields */
+.form-container input[type="text"] {
+    width: calc(100% - 20px);
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+/* Styling for the submit button */
+.form-container input[type="submit"] {
+    width: 100%;
+    background-color: #0df2d7;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+/* Hover effect for the submit button */
+.form-container input[type="submit"]:hover {
+    background-color: #0df2d7;
+}
+.form-container .delete-button[type="submit"] {
+    width: 100%;
+    background-color: #a172ff;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+/* Hover effect for the submit button */
+.form-container .delete-button[type="submit"]:hover {
+    background-color: #a172ff;
+}
+
+
+#div-todos {
+    padding-top: 20px;
+}
+.div-overskrift {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+}
+.todo-item {
+    background-color: #0e2032;
+    /* border: 1px solid #e0e0e0; */
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: calc(25% - 20px); /* 25% width with 20px margin on each side */
+    float: left; /* Float the items to create the grid layout */
+    box-sizing: border-box; /* Include padding and border in the width */
+    overflow-wrap: break-word;
+}
+#form-endre {
+    padding-bottom: 20px;
+}
+/* Styling for the todo text */
+.todo-text {
+    font-size: 18px;
+    margin-bottom: 10px;
+    background-color: #0e2032;
+    color: #eaf2fa;
+}
+
+/* Styling for the todo ID */
+.todo-id {
+    font-size: 14px;
+    color: #666666;
+    margin-bottom: 10px;
+}
+
+/* Styling for the delete button */
+.delete-button {
+    background-color: #a172ff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Hover effect for the delete button */
+.delete-button:hover {
+    background-color: #a172ff;
+}
+.edit-button {
+    background-color: #0df2d7;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Hover effect for the edit button */
+.edit-button:hover {
+    background-color: #0df2d7;
+}
+/* Clear the float after every 4 items to prevent overlapping */
+.clear {
+    clear: both;
+}
+
+.div-forms-todo {
+    display: flex;
+    justify-content: space-between;
+    background-color: #0e2032;
+}
