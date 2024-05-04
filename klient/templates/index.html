@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>Logg inn</h2>
+
+<form action="logginn" method="post">
+    <input type="text" id="navn" name="navn">
+    <input type="submit">
+</form>
+{% if feil %}
+<p>{{feil}} </p>
+{% endif %}
+{% endblock %}
